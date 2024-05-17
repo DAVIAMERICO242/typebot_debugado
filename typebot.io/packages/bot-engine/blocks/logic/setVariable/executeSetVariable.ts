@@ -88,7 +88,7 @@ const getExpressionToEvaluate =
       }
       case 'Phone number': {
         const phoneNumber = state.whatsApp?.contact.phoneNumber.split('@')[0]
-        return phoneNumber ? `"${state.whatsApp?.contact.phoneNumber}"` : null
+        return phoneNumber ? `"${state.whatsApp?.contact.phoneNumber.split('@')[0]}"` : null
       }
       case 'Now': {
         return '{{=new Date(new Date().getTime()).toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo", day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit"});=}}'
