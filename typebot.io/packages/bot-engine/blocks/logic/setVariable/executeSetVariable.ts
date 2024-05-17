@@ -87,7 +87,7 @@ const getExpressionToEvaluate =
         return state.whatsApp?.contact.name ?? null
       }
       case 'Phone number': {
-        const phoneNumber = state.whatsApp?.contact.phoneNumber
+        const phoneNumber = state.whatsApp?.contact.phoneNumber.split('@')[0]
         return phoneNumber ? `"${state.whatsApp?.contact.phoneNumber}"` : null
       }
       case 'Now': {
